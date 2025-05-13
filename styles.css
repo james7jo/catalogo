@@ -1,147 +1,180 @@
-/* ESTILO PUBLICITARIO PROMOCIONAL PARA CATÁLOGO TIPO VOLANTE */
-
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to bottom, #eaf7f2, #ffffff);
-  color: #222;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-.promo-header {
-  background: #15727c;
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem 1rem;
-  border-bottom: 6px solid #f4c542;
+/* Botones Flotantes */
+.menu-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.promo-banner img {
-  width: 140px;
-  max-width: 100%;
-  margin-bottom: 0.5rem;
+.menu-btn:hover {
+    background-color: #4cae4c;
 }
 
-.promo-banner h1 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 0.5rem 0 0.3rem;
-  color: #fff;
+/* Sidebar de Navegación */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-.promo-banner p {
-  font-size: 1rem;
-  color: #eee;
-  margin-bottom: 1rem;
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
 }
 
-.promo-catalogo {
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: auto;
+.sidebar a:hover {
+    color: #bbb;
 }
 
-.promo-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
+.sidebar.open {
+    width: 200px;
 }
 
-.promo-producto {
-  background: white;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px solid #f4c54210;
-  position: relative;
+/* Header */
+header {
+    background-color: #e0f7fa; /* Un tono claro para el header */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.promo-producto:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+.logo-container {
+    /* Aquí puedes agregar estilos para tu logo si lo tuvieras como imagen o texto */
+    font-size: 2em;
+    font-weight: bold;
+    color: #00bcd4; /* Un color llamativo para el logo */
 }
 
-.promo-producto img {
-  width: 100%;
-  max-width: 160px;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 0.8rem;
-  transition: transform 0.3s ease;
+/* Main Catálogo */
+.catalogo {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
 }
 
-.promo-producto:hover img {
-  transform: scale(1.07);
+.catalogo h2 {
+    grid-column: 1 / -1;
+    color: #3f51b5; /* Un color primario para los títulos de sección */
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3f51b5;
+    padding-bottom: 5px;
 }
 
-.promo-producto h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #15727c;
-  margin: 0.5rem 0 0.2rem;
+/* Producto Individual */
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
-.promo-producto p {
-  font-size: 0.9rem;
-  color: #444;
-  margin-bottom: 0.5rem;
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.promo-precio {
-  font-size: 1.2rem;
-  background: #f4c542;
-  color: #000;
-  font-weight: bold;
-  padding: 0.4rem 1rem;
-  border-radius: 30px;
-  margin-bottom: 0.6rem;
-  display: inline-block;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.producto img:hover {
+    transform: scale(1.05);
 }
 
-.promo-btn {
-  background-color: #25D366;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  font-weight: bold;
-  font-size: 0.95rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+.producto h2 {
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #2196f3; /* Otro color primario para los títulos de producto */
+    grid-column: auto; /* Resetear la propiedad grid-column */
 }
 
-.promo-btn:hover {
-  background-color: #1ebe5d;
-  transform: scale(1.05);
+.producto p {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
 }
 
-.promo-footer {
-  background: #15727c;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  border-top: 6px solid #f4c542;
-  margin-top: 3rem;
+.precio {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ff9800; /* Un color de acento para el precio */
+    margin-bottom: 10px;
 }
 
-@media (max-width: 480px) {
-  .promo-banner h1 {
-    font-size: 1.6rem;
-  }
-  .promo-banner p {
-    font-size: 0.85rem;
-  }
-  .promo-precio {
-    font-size: 1rem;
-  }
-  .promo-btn {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
+.boton-whatsapp {
+    display: inline-block;
+    background-color: #4CAF50; /* Color verde de WhatsApp */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+    background-color: #367c39;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8em;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para hacerlo más responsivo */
+@media (max-width: 600px) {
+    .catalogo {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    }
+
+    .menu-btn {
+        left: 10px;
+        bottom: 10px;
+    }
+
+    .sidebar.open {
+        width: 150px;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+        padding: 6px 8px 6px 20px;
+    }
 }
