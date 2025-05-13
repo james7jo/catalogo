@@ -1,29 +1,31 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna y profesional */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #f8f9fa; /* Fondo gris claro sutil */
+    color: #343a40; /* Texto oscuro */
+    line-height: 1.6;
 }
 
 /* Botones Flotantes */
 .menu-btn {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    background-color: #5cb85c;
+    bottom: 30px;
+    left: 30px;
+    background-color: #007bff; /* Azul primario profesional */
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
 .menu-btn:hover {
-    background-color: #4cae4c;
+    background-color: #0056b3;
 }
 
 /* Sidebar de Navegación */
@@ -34,173 +36,192 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #333;
+    background-color: #343a40; /* Fondo oscuro profesional */
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    transition: 0.3s;
+    padding-top: 80px;
 }
 
 .sidebar a {
-    padding: 8px 8px 8px 32px;
+    padding: 12px 24px;
     text-decoration: none;
-    font-size: 18px;
-    color: #f1f1f1;
+    font-size: 16px;
+    color: #f8f9fa; /* Texto claro */
     display: block;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .sidebar a:hover {
-    color: #bbb;
+    color: #adb5bd; /* Gris más claro al pasar el ratón */
 }
 
 .sidebar.open {
-    width: 200px;
+    width: 250px;
 }
 
 /* Header */
 header {
-    background-color: #e0f7fa; /* Un tono claro para el header */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
+    background-color: #ffffff; /* Fondo blanco */
+    padding: 25px 30px;
+    text-align: left; /* Alineación a la izquierda para un look más tradicional */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo-container {
-    /* Aquí puedes agregar estilos para tu logo si lo tuvieras como imagen o texto */
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #00bcd4; /* Un color llamativo para el logo */
+    font-size: 2.2em;
+    font-weight: 500; /* Ligeramente más delgado que bold */
+    color: #007bff; /* Azul primario */
 }
 
 /* Main Catálogo */
 .catalogo {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado para al menos 4 en pantallas grandes */
-    gap: 20px;
+    padding: 30px;
 }
 
 .catalogo h2 {
-    grid-column: 1 / -1;
-    color: #3f51b5; /* Un color primario para los títulos de sección */
-    margin-bottom: 15px;
-    border-bottom: 2px solid #3f51b5;
-    padding-bottom: 5px;
+    font-size: 2em;
+    color: #212529; /* Negro suave para los títulos */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #007bff; /* Línea de énfasis azul */
+    padding-bottom: 10px;
+    margin-top: 30px; /* Espacio superior para separar secciones */
+}
+
+.catalogo > section > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ancho mínimo para al menos 4 */
+    gap: 25px;
+    margin-top: 20px; /* Espacio entre la fila de productos y el título */
 }
 
 /* Producto Individual */
 .producto {
-    background-color: white;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* Para que la imagen redondeada no sobresalga */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Espacia los elementos internos */
 }
 
-.producto a {
-    text-decoration: none; /* Para quitar el subrayado del enlace de la imagen */
-    color: inherit; /* Para que el texto dentro del enlace herede el color */
+.producto a:first-child { /* Estilo para el enlace de la imagen */
+    display: block;
+    text-decoration: none; /* Quitar subrayado */
 }
 
 .producto img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Cubre el contenedor sin deformar la imagen */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
 
 .producto img:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-.producto h2 {
-    font-size: 1.1em; /* Reduje un poco el tamaño para más espacio */
-    margin-top: 10px;
-    margin-bottom: 5px;
-    color: #2196f3; /* Otro color primario para los títulos de producto */
-    grid-column: auto; /* Resetear la propiedad grid-column */
+.producto-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Ocupar espacio restante */
 }
 
-.producto p {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-    flex-grow: 1; /* Permite que el párrafo ocupe el espacio restante */
+.producto-info h2 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #343a40;
+    grid-column: auto;
+}
+
+.producto-info p {
+    font-size: 0.95em;
+    color: #6c757d;
+    margin-bottom: 12px;
+    flex-grow: 1; /* Empujar el precio y el botón hacia abajo */
 }
 
 .precio {
     display: block;
-    font-size: 1em;
+    font-size: 1.1em;
     font-weight: bold;
-    color: #ff9800; /* Un color de acento para el precio */
-    margin-bottom: 10px;
+    color: #28a745; /* Verde para el precio */
+    margin-bottom: 15px;
 }
 
 .boton-whatsapp {
     display: inline-block;
-    background-color: #4CAF50; /* Color verde de WhatsApp */
+    background-color: #28a745; /* Verde WhatsApp más profesional */
     color: white;
-    padding: 10px 15px;
+    padding: 10px 18px;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 0.9em;
     transition: background-color 0.3s ease;
+    text-align: center;
 }
 
 .boton-whatsapp:hover {
-    background-color: #367c39;
+    background-color: #1e7e34;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #343a40;
+    color: #f8f9fa;
     text-align: center;
-    padding: 15px 0;
-    font-size: 0.8em;
+    padding: 20px 0;
+    font-size: 0.9em;
     position: sticky;
     bottom: 0;
     width: 100%;
+    margin-top: 50px; /* Espacio superior del footer */
 }
 
 /* Media Queries para hacerlo más responsivo */
-@media (max-width: 960px) { /* Pantallas más pequeñas donde 4 columnas podrían no verse bien */
-    .catalogo {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Volver a un ancho mínimo mayor */
+@media (max-width: 992px) { /* Tablets y pantallas medianas */
+    .catalogo > section > div {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Asegurar al menos 3 */
     }
 }
 
-@media (max-width: 600px) {
-    .catalogo {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
-    }
-
-    .menu-btn {
-        left: 10px;
-        bottom: 10px;
+@media (max-width: 768px) { /* Móviles grandes */
+    .catalogo > section > div {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Asegurar al menos 2 */
     }
 
     .sidebar.open {
-        width: 150px;
+        width: 200px;
     }
 
     .sidebar a {
-        font-size: 16px;
-        padding: 6px 8px 6px 20px;
+        font-size: 15px;
+        padding: 10px 20px;
     }
 
     header {
-        padding: 15px;
+        padding: 20px;
+        text-align: center; /* Centrar logo en móviles */
     }
 
     .logo-container {
         font-size: 2em;
+    }
+}
+
+@media (max-width: 576px) { /* Móviles pequeños */
+    .catalogo > section > div {
+        grid-template-columns: 1fr; /* Una sola columna en móviles pequeños */
+    }
+
+    .menu-btn {
+        bottom: 20px;
+        left: 20px;
+        font-size: 16px;
+        padding: 10px 15px;
     }
 }
