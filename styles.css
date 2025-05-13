@@ -63,11 +63,14 @@ header {
     padding: 20px;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
 }
 
 .logo-container {
     /* Aquí puedes agregar estilos para tu logo si lo tuvieras como imagen o texto */
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
     color: #00bcd4; /* Un color llamativo para el logo */
 }
@@ -76,7 +79,7 @@ header {
 .catalogo {
     padding: 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado para al menos 4 en pantallas grandes */
     gap: 20px;
 }
 
@@ -95,6 +98,14 @@ header {
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacia los elementos internos */
+}
+
+.producto a {
+    text-decoration: none; /* Para quitar el subrayado del enlace de la imagen */
+    color: inherit; /* Para que el texto dentro del enlace herede el color */
 }
 
 .producto img {
@@ -110,8 +121,8 @@ header {
 }
 
 .producto h2 {
-    font-size: 1.2em;
-    margin-top: 0;
+    font-size: 1.1em; /* Reduje un poco el tamaño para más espacio */
+    margin-top: 10px;
     margin-bottom: 5px;
     color: #2196f3; /* Otro color primario para los títulos de producto */
     grid-column: auto; /* Resetear la propiedad grid-column */
@@ -121,11 +132,12 @@ header {
     font-size: 0.9em;
     color: #777;
     margin-bottom: 10px;
+    flex-grow: 1; /* Permite que el párrafo ocupe el espacio restante */
 }
 
 .precio {
     display: block;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     color: #ff9800; /* Un color de acento para el precio */
     margin-bottom: 10px;
@@ -159,6 +171,12 @@ footer {
 }
 
 /* Media Queries para hacerlo más responsivo */
+@media (max-width: 960px) { /* Pantallas más pequeñas donde 4 columnas podrían no verse bien */
+    .catalogo {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Volver a un ancho mínimo mayor */
+    }
+}
+
 @media (max-width: 600px) {
     .catalogo {
         grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
@@ -176,5 +194,13 @@ footer {
     .sidebar a {
         font-size: 16px;
         padding: 6px 8px 6px 20px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    .logo-container {
+        font-size: 2em;
     }
 }
