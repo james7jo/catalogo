@@ -2,217 +2,173 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Catálogo Pet Shop</title>
-  <link rel="stylesheet" href="./styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Prince | Catálogo Pet Prince 2025</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<!-- Botones flotantes -->
-
-<button class="menu-btn bottom-menu" onclick="toggleSidebar()">☰</button>
-
-<!-- Sidebar de navegación -->
-<nav id="sidebar" class="sidebar">
-  <a href="#perros">Alimento para Perros</a>
-  <a href="#gatos">Alimento para Gatos</a>
-  <a href="#accesorios">Accesorios</a>
-  <a href="#" onclick="toggleSidebar()">Cerrar ✖</a>
-</nav>
-
-<header>
-  <div class="logo-container"></div>
-</header>
-
-<main class="catalogo">
-
-  <!-- Sección Perros -->
-  <section id="perros">
-    <h2>🐶 Alimento para Perros</h2>
-    <div class="producto">
-      <a href="https://vitalcan.com/producto/complete-perro-cachorro-raza-mediana-y-grande/" target="_blank">
-      <img src="./img/perro/complete-large.png" alt="Complete-large" style="cursor: pointer; width: 200px; border-radius: 10px;">
-      </a>
-      <h2>Complete Cachorro para razas Grandes</h2>
-      <p>toca la imagen para saber mas acerca el producto</p>
-      <span class="precio">Bs. 330   Kg.  20</span>
-      <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
+  <header class="site-header">
+    <div class="logo-nav">
+      <img src="./img/1 log principal sin fondo.png" alt="Pet Prince Logo" class="logo">
+      <nav class="main-nav">
+        <a href="#perros">Perros</a>
+        <a href="#gatos">Gatos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#catalogo">Catálogo</a>
+      </nav>
     </div>
-    <div class="producto">
-      <a href="https://vitalcan.com/producto/complete-perro-cachorro-raza-pequena/" target="_blank">
-      <img src="./img/perro/complete-small.png" alt="Complete-small" style="cursor: pointer; width: 200px; border-radius: 10px;">
-      </a>
-      <h2>Complete Cachorro para razas Pequeñas</h2>
-      <p>toca en la imagen para saber mas acerca del producto</p>
-      <span class="precio">Bs. 330 Kg. 20 </span>
-      <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
+    <div class="header-message">
+      <h1>Catálogo Pet Prince 2025</h1>
+      <p>Nutrición Premium para Perros y Gatos</p>
     </div>
-    <div class="producto">
-        <a href="https://oldprince.com.ar/producto/old-prince-premium-adultos/" target="_blank">
-            <img src="./img/perro/oldprinceAPs.png" alt="old-adulto" style="cursor: pointer; width: 200px; border-radius: 10px;">
-            </a>
-      <h2>Old Prince Adulto Premium</h2>
-      <p>toca en la imagen para saber mas acerca del producto</p>
-      <span class="precio">Bs. 380 Kg. 20</span>
-      <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-    </div>
-    <div class="producto">
-        <a href="https://oldprince.com.ar/producto/old-prince-premium-cachorros/" target="_blank">
-        <img src="./img/perro/oldprinceCP.png" alt="old-adulto" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-      <h2>Old Prince Cachorro Premium</h2>
-      <p>toca en la imagen para saber mas acerca del producto</p>
-      <span class="precio">Bs. 320 Kg. 15</span>
-      <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-    </div>
-    <div class="producto">
-        <a href="https://oldprince.com.ar/producto/old-prince-equilibrium-cachorros/" target="_blank">
-        <img src="./img/perro/old-prince-eq-ca.png" alt="old-equi-cacho" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Old Prince Cachorro Equilibrium</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 340 Kg. 17</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-      </div>
-      <div class="producto">
-        <a href="https://www.purina.com.ar/dogui/adultos-con-carne-pollo" target="_blank">
-        <img src="./img/perro/dogui.png" alt="dogui" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Dogui Adulto</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 330 Kg. 24</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-      </div>
-      <div class="producto">
-        <a href="https://veterinariaaguara.com/alimentos-para-perros/ruffo-x-20-kg/" target="_blank">
-        <img src="./img/perro/ruffomax.png" alt="ruffo" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Ruffo Max</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 230 Kg. 20</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-      </div>
-      <div class="producto">
-        <a href="" target="_blank">
-        <img src="./img/perro/vorazs.png" alt="ruffo" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Voraz</h2>
-        <p>Pocas Unidades!!!</p>
-        <span class="precio">Bs. 190 Kg. 22</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-      </div>
-      <div class="producto">
-        <a href="https://sieger.com.ar/producto/adult-energy-recovery/" target="_blank">
-        <img src="./img/perro/sieger-recovery.jpg" alt="ruffo" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Sieger Recovery</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 40  Gr. 340</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-      </div>  
-      <div class="producto">
-        <img src="./img/perro/puch.png" alt="Alimento húmedo">
-        <h2>Alimento Húmedo Pedigree</h2>
-        <p>Consultar sabores</p>
-        <span class="precio">Bs. 7</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20productos%20" target="_blank">Compra ahora</a>
-      </div>
+  </header>
 
-  </section>
-
-  <!-- Sección Gatos -->
-  <section id="gatos">
-    <h2>🐱 Alimento para Gatos</h2>
-    <div class="producto">
-        <a href="https://www.royalcanin.com/es/cats/products/retail-products/persian-adult-2552" target="_blank">
-        <img src="./img/gato/persian.png" alt="royal-persian" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Royal Canin Persian</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 730 Kg. 7.5</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20royal%20canin%20persian%20" target="_blank">Compra ahora</a>
+  <main id="catalogo" class="catalogo-container">
+    <section id="perros" class="seccion">
+      <h2>Alimento para Perros</h2>
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="./img/perro/complete-large.png" alt="Complete Cachorro Grande">
+          <h3>Complete Cachorro Grande</h3>
+          <p>Razas grandes. Desarrollo saludable.</p>
+          <span class="precio">Bs. 330 (20 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Complete Cachorro Grande">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/complete-small.png" alt="Complete Cachorro Pequeño">
+          <h3>Complete Cachorro Pequeño</h3>
+          <p>Para razas pequeñas. Tamaño de croqueta ideal.</p>
+          <span class="precio">Bs. 330 (20 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Complete Cachorro Pequeño">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/oldprinceAPs.png" alt="Old Prince Adulto Premium">
+          <h3>Old Prince Adulto Premium</h3>
+          <p>Nutrición completa para adultos.</p>
+          <span class="precio">Bs. 380 (20 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Old Prince Adulto">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/oldprinceCP.png" alt="Old Prince Cachorro Premium">
+          <h3>Old Prince Cachorro Premium</h3>
+          <p>Fortalece su desarrollo desde pequeños.</p>
+          <span class="precio">Bs. 320 (15 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Old Prince Cachorro">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/old-prince-eq-ca.png" alt="Old Prince Equilibrium Cachorros">
+          <h3>Old Prince Equilibrium Cachorros</h3>
+          <p>Balanceado y rico en proteínas.</p>
+          <span class="precio">Bs. 340 (17 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Old Prince Equilibrium Cachorros">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/dogui.png" alt="Dogui Adulto">
+          <h3>Dogui Adulto</h3>
+          <p>Con carne y vegetales.</p>
+          <span class="precio">Bs. 330 (24 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Dogui Adulto">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/ruffomax.png" alt="Ruffo Max">
+          <h3>Ruffo Max</h3>
+          <p>Alimento económico y nutritivo.</p>
+          <span class="precio">Bs. 230 (20 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Ruffo Max">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/vorazs.png" alt="Voraz">
+          <h3>Voraz</h3>
+          <p>Pocas unidades disponibles.</p>
+          <span class="precio">Bs. 220 (22 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Voraz">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/sieger-recovery.jpg" alt="Sieger Recovery">
+          <h3>Sieger Recovery</h3>
+          <p>Fórmula especializada para recuperación.</p>
+          <span class="precio">Bs. 40 (Gr. 340)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Sieger Recovery">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/perro/puch.png" alt="Pedigree Húmedo">
+          <h3>Pedigree Húmedo</h3>
+          <p>Consultar sabores disponibles.</p>
+          <span class="precio">Bs. 7</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Pedigree Húmedo">Comprar por WhatsApp</a>
+        </div>
       </div>
-      <div class="producto">
-        <a href="https://fawna.com.ar/gato-esterilizado/" target="_blank">
-        <img src="./img/gato/fawna-este.png" alt="fawna-e" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Fawna para gatos Esterilizados</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 440 Kg. 7.5</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20fawna%20esterilizado%20" target="_blank">Compra ahora</a>
-      </div>
-      <div class="producto">
-        <a href="https://fawna.com.ar/gato-urinario/" target="_blank">
-        <img src="./img/gato/fawna-uri.png" alt="fawna-e" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Fawna Urinary</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 480 Kg. 7.5</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20fawna%20urinary%20" target="_blank">Compra ahora</a>
-      </div>
-      <div class="producto">
-        <a href="https://www.purina.com.ar/gati/carne-pollo-a-la-jardinera" target="_blank">
-        <img src="./img/gato/gati.png" alt="fawna-e" style="cursor: pointer; width: 200px; border-radius: 10px;">
-        </a>
-        <h2>Gaty Adulto</h2>
-        <p>Toca en la imagen para saber mas acerca del producto</p>
-        <span class="precio">Bs. 305 Kg. 15</span>
-        <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20gaty%20adulto%20" target="_blank">Compra ahora</a>
-      </div>
-    <div class="producto">
-      <img src="./img/gato/puoch-w.png" alt="Alimento húmedo">
-      <h2>Alimento Humedo Whiskas</h2>
-      <p>Consultar sabores</p>
-      <span class="precio">Bs. 7</span>
-      <a class="boton-whatsapp" href="https://wa.me/59174244882?text=Hola%2C%20quiero%20comprar%20whiskas%20humedo%20" target="_blank">Compra ahora</a>
-    </div>
-  </section>
+    </section>
 
-  <!-- Sección Accesorios 
-  <section id="accesorios">
-    <h2>🎁 Accesorios</h2>
-    <div class="producto">
-      <img src="img/accesorio1.png" alt="Rascador">
-      <h2>Rascador para Gato</h2>
-      <p>Perfecto para mantener sus uñas sanas.</p>
-      <span class="precio">Bs. 80</span>
-    </div>
-    <div class="producto">
-      <img src="img/accesorio2.png" alt="Correa">
-      <h2>Correa Ajustable</h2>
-      <p>Resistente y cómoda para paseos largos.</p>
-      <span class="precio">Bs. 50</span>
-    </div>
-    <div class="producto">
-      <img src="img/accesorio3.png" alt="Comedero doble">
-      <h2>Comedero Doble</h2>
-      <p>Práctico para agua y comida. Antideslizante.</p>
-      <span class="precio">Bs. 45</span>
-    </div>
-    <div class="producto">
-      <img src="img/accesorio4.png" alt="Juguete interactivo">
-      <h2>Juguete Interactivo</h2>
-      <p>Estimula la mente y el cuerpo.</p>
-      <span class="precio">Bs. 60</span>
-    </div>
-    <div class="producto">
-        <img src="img/accesorio4.png" alt="Juguete interactivo">
-        <h2>Juguete Interactivo</h2>
-        <p>Estimula la mente y el cuerpo.</p>
-        <span class="precio">Bs. 60</span>
+    <section id="gatos" class="seccion">
+      <h2>Alimento para Gatos</h2>
+      <div class="productos-grid">
+        <div class="producto">
+          <img src="./img/gato/persian.png" alt="Royal Canin Persian">
+          <h3>Royal Canin Persian</h3>
+          <p>Exclusivo para gatos de raza Persa.</p>
+          <span class="precio">Bs. 730 (7.5 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Royal Persian">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/gato/fawna-este.png" alt="Fawna Esterilizado">
+          <h3>Fawna Esterilizado</h3>
+          <p>Control del peso y salud urinaria.</p>
+          <span class="precio">Bs. 440 (7.5 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Fawna Esterilizado">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/gato/fawna-uri.png" alt="Fawna Urinary">
+          <h3>Fawna Urinary</h3>
+          <p>Cuida la salud urinaria de tu felino.</p>
+          <span class="precio">Bs. 480 (7.5 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Fawna Urinary">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/gato/gati.png" alt="Gaty Adulto">
+          <h3>Gaty Adulto</h3>
+          <p>Con carne y pollo. Sabor delicioso.</p>
+          <span class="precio">Bs. 305 (15 Kg)</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Gaty">Comprar por WhatsApp</a>
+        </div>
+        <div class="producto">
+          <img src="./img/gato/puoch-w.png" alt="Whiskas Húmedo">
+          <h3>Whiskas Húmedo</h3>
+          <p>Consulta sabores disponibles.</p>
+          <span class="precio">Bs. 7</span>
+          <a class="boton-compra" href="https://wa.me/59174244882?text=Hola, quiero comprar Whiskas Húmedo">Comprar por WhatsApp</a>
+        </div>
       </div>
-  </section>-->
-</main>
+    </section>
+  </main>
 
-<footer>
-  <p> 2025 Pet Prince | ¡Tu mejor amigo merece lo mejor!</p>
-</footer>
-
-<script>
-  function toggleSidebar() {
-    document.querySelector('.sidebar').classList.toggle('open');
-  }
-</script>
-
+  <footer class="site-footer">
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Quiénes somos</h4>
+        <p>En Pet Prince nos dedicamos con pasión al cuidado y bienestar de tus mascotas. Seleccionamos productos de alta calidad para que cada perro y gato reciba la nutrición y cariño que merece. Tu confianza nos inspira a seguir creciendo junto a quienes más amas.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contáctanos</h4>
+        <ul>
+          <li><a href="https://wa.me/59174244882" target="_blank">WhatsApp</a></li>
+          <li><a href="mailto:info@petprince.com">info@petprince.com</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Categorías</h4>
+        <ul>
+          <li><a href="#perros">Perros</a></li>
+          <li><a href="#gatos">Gatos</a></li>
+          <li><a href="#catalogo">Catálogo</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2025 Pet Prince. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 </body>
 </html>
