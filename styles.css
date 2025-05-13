@@ -1,205 +1,377 @@
+/* Reset y estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+}
+
+:root {
+  --color-primary: #FF6B6B;
+  --color-secondary: #4ECDC4;
+  --color-accent: #FFE66D;
+  --color-dark: #292F36;
+  --color-light: #F7FFF7;
+  --color-grey: #e0e0e0;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f2f5;
-    color: #282c3f;
-    line-height: 1.7;
+  background-color: #f8f9fa;
+  color: var(--color-dark);
+  line-height: 1.6;
 }
 
-/* Botones Flotantes */
-.menu-btn {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background-color: #3366cc;
-    color: white;
-    border: none;
-    padding: 14px 20px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 10;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease;
-}
-
-.menu-btn:hover {
-    background-color: #254b8a;
-}
-
-/* Sidebar de Navegación */
-.sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 90px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
-}
-
-.sidebar a {
-    padding: 16px 30px;
-    text-decoration: none;
-    font-size: 16px;
-    color: #54596f;
-    display: block;
-    transition: color 0.3s ease;
-}
-
-.sidebar a:hover {
-    color: #3366cc;
-    background-color: #f0f0f0;
-}
-
-.sidebar.open {
-    width: 280px;
-}
-
-/* Header */
+/* Cabecera */
 header {
-    background-color: #fff;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+  margin-bottom: 2rem;
 }
 
 .logo-container {
-    font-size: 2.8em;
-    font-weight: bold;
-    color: #3366cc;
-    letter-spacing: -1px;
+  height: 120px;
+  background-image: url('https://via.placeholder.com/400x120?text=Pet+Prince');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  max-width: 400px;
 }
 
-/* Main Catálogo */
+/* Contenido principal */
 .catalogo {
-    padding: 40px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
-.catalogo h2 {
-    font-size: 2.4em;
-    color: #282c3f;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #3366cc;
-    padding-bottom: 12px;
-    margin-top: 40px;
-    font-weight: 600;
+/* Secciones */
+section {
+  margin-bottom: 3rem;
+  overflow: hidden;
 }
 
-.catalogo > section > div {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado para al menos 4 */
-    gap: 30px;
-    margin-top: 25px;
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--color-primary);
+  color: var(--color-dark);
+  display: inline-block;
+  position: relative;
 }
 
-/* Producto Individual (El "Cuadrado") */
+section h2:after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+}
+
+/* Productos Grid */
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+section > h2 {
+  margin-bottom: 2rem;
+  align-self: flex-start;
+}
+
+section > div.producto-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Tarjetas de producto */
 .producto {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column; /* Apilar elementos dentro del cuadrado */
-    transition: box-shadow 0.3s ease;
-    text-align: center; /* Centrar el contenido dentro del cuadrado */
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
 }
 
 .producto:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
-}
-
-.producto a:first-child { /* Enlace para la imagen */
-    display: block;
-    text-decoration: none;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .producto img {
-    width: 100%;
-    height: auto; /* Ajustar altura automáticamente */
-    max-height: 180px; /* Altura máxima para evitar que los cuadrados sean demasiado altos */
-    object-fit: cover;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    margin-bottom: 15px; /* Espacio debajo de la imagen */
+  width: 100%;
+  object-fit: contain;
+  height: 200px;
+  background-color: #f9f9f9;
+  transition: transform 0.5s ease;
+}
+
+.producto:hover img {
+  transform: scale(1.05);
 }
 
 .producto h2 {
-    font-size: 1.1em;
-    margin-top: 0;
-    margin-bottom: 8px;
-    color: #282c3f;
-    font-weight: 500;
-    padding: 0 15px; /* Espacio a los lados del título */
+  font-size: 1.2rem;
+  padding: 1rem 1rem 0.5rem;
+  color: var(--color-dark);
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .producto p {
-    font-size: 0.95em;
-    color: #54596f;
-    margin-bottom: 12px;
-    padding: 0 15px; /* Espacio a los lados del párrafo */
+  padding: 0 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  flex-grow: 1;
 }
 
 .precio {
-    display: block;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #2ecc71;
-    margin-bottom: 15px;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--color-primary);
 }
 
 .boton-whatsapp {
-    display: inline-block;
-    background-color: #2ecc71;
-    color: white;
-    padding: 10px 18px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 0.9em;
-    transition: background-color 0.3s ease;
-    margin-bottom: 20px; /* Espacio inferior del botón */
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.8rem;
+  margin: 1rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: block;
 }
 
 .boton-whatsapp:hover {
-    background-color: #27ae60;
+  background-color: #128C7E;
+}
+
+/* Menú de navegación */
+.menu-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.menu-btn:hover {
+  background-color: #ff4f4f;
+  transform: scale(1.1);
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow);
+  z-index: 99;
+  transition: left 0.3s ease;
+  padding-top: 70px;
+  backdrop-filter: blur(10px);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar a {
+  display: block;
+  padding: 15px 20px;
+  color: var(--color-dark);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid var(--color-grey);
+}
+
+.sidebar a:hover {
+  background-color: var(--color-secondary);
+  color: white;
+  padding-left: 30px;
 }
 
 /* Footer */
 footer {
-    background-color: #282c3f;
-    color: #f0f2f5;
-    text-align: center;
-    padding: 25px 0;
-    font-size: 0.9em;
-    margin-top: 60px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: 3rem;
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 1200px) {
-    .catalogo > section > div {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajuste para pantallas más pequeñas */
-    }
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 992px) {
-    .catalogo > section > div {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Asegurar al menos 3 */
-    }
+.producto {
+  animation: fadeIn 0.5s ease-out forwards;
 }
 
-@media (max-width: 768px) {
-    .catalogo > section > div {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Asegurar al menos 2 */
-    }
+/* Estilos para secciones específicas */
+#perros {
+  background-color: #f8f9fa;
+  border-radius: var(--radius);
+  padding: 2rem;
 }
 
-@media (max-width: 576px) {
-    .catalogo > section > div {
-        grid-template-columns: 1fr; /* Una sola columna en móviles */
-    }
+#gatos {
+  background-color: #f0f0f0;
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+#accesorios {
+  background-color: #f8f9fa;
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+/* Media queries para responsividad */
+@media (min-width: 576px) {
+  section > div.producto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-container {
+    height: 150px;
+  }
+  
+  section > div.producto-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  section > div.producto-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .producto h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mejoras adicionales para dispositivos móviles */
+@media (max-width: 575px) {
+  .producto {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+  
+  .menu-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
+
+/* Badges para productos especiales */
+.producto .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  z-index: 1;
+}
+
+/* Ajustes para el diseño tipo revista */
+.catalogo {
+  position: relative;
+}
+
+.catalogo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+/* Bandas promocionales */
+.promo-banner {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: white;
+  padding: 1rem;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+}
+
+/* Estilo para precios con descuento */
+.precio-original {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+/* Animación para el botón de WhatsApp */
+.boton-whatsapp {
+  position: relative;
+  overflow: hidden;
+}
+
+.boton-whatsapp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transition: all 0.6s ease;
+}
+
+.boton-whatsapp:hover::before {
+  left: 100%;
 }
