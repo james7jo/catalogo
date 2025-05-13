@@ -1,251 +1,226 @@
-/* Reset y estilos generales */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-}
-
-:root {
-  --color-primary: #FF6B6B;
-  --color-secondary: #4ECDC4;
-  --color-accent: #FFE66D;
-  --color-dark: #292F36;
-  --color-light: #F7FFF7;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --radius: 8px;
-}
+/* ESTILOS PROFESIONALES PARA PET PRINCE */
 
 body {
-  background-color: #f8f9fa;
-  color: var(--color-dark);
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f7f7f7;
+  color: #333;
   line-height: 1.6;
-  padding-bottom: 60px;
 }
 
-/* Header */
-header {
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
-  padding: 1.5rem;
-  text-align: center;
-  box-shadow: var(--shadow);
-  margin-bottom: 2rem;
-}
-
-.logo-container {
-  height: 100px;
-  background-image: url('https://via.placeholder.com/400x120?text=Pet+Prince');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 auto;
-  max-width: 400px;
-}
-
-/* Menú flotante */
-.menu-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  background-color: var(--color-primary);
+/* HEADER */
+.site-header {
+  background: linear-gradient(to right, #15727c, #1a9ea4);
   color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: var(--shadow);
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -250px;
-  width: 250px;
-  height: 100vh;
-  background-color: white;
-  box-shadow: var(--shadow);
-  z-index: 99;
-  transition: left 0.3s ease;
-  padding-top: 60px;
+.logo {
+  height: 90px;
+  max-width: 100%;
 }
 
-.sidebar.open {
-  left: 0;
-}
-
-.sidebar a {
-  display: block;
-  padding: 15px 20px;
+.main-nav a {
+  color: white;
   text-decoration: none;
-  color: var(--color-dark);
-  font-weight: 500;
-  border-bottom: 1px solid #eee;
-  transition: background-color 0.3s;
+  margin: 0 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 1rem;
 }
 
-.sidebar a:hover {
-  background-color: #f5f5f5;
-  color: var(--color-primary);
+.main-nav a:hover {
+  color: #ffd700;
 }
 
-/* Catálogo principal */
-.catalogo {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 15px;
+.header-message {
+  text-align: center;
+  margin-top: 0.5rem;
 }
 
-/* Secciones */
-section {
-  margin-bottom: 3rem;
-  padding: 1.5rem;
-  border-radius: var(--radius);
-  background-color: white;
-  box-shadow: var(--shadow);
+.header-message h1 {
+  font-size: 2rem;
+  margin: 0.3rem 0;
 }
 
-section h2 {
+.header-message p {
+  font-size: 1rem;
+  margin: 0;
+  color: #e0f7f7;
+}
+
+/* CATÁLOGO */
+.catalogo-container {
+  padding: 2rem;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.seccion h2 {
   font-size: 1.8rem;
+  color: #15727c;
   margin-bottom: 1.5rem;
-  color: var(--color-primary);
-  border-bottom: 2px solid var(--color-secondary);
-  padding-bottom: 0.5rem;
-  display: inline-block;
+  border-left: 6px solid #f4c542;
+  padding-left: 0.8rem;
 }
 
-/* GRID DE PRODUCTOS - IMPORTANTE */
-section {
-  display: block;  /* Cambiar a block en lugar de flex para evitar problemas */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
-section > h2:first-child {
-  margin-bottom: 1.5rem;
-}
-
-/* Este es el contenedor de los productos */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Cada producto como tarjeta */
 .producto {
-  float: left;
-  width: 100%;  /* Por defecto para móviles */
-  padding: 10px;
-  margin-bottom: 20px;
   background: white;
-  border-radius: var(--radius);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-sizing: border-box;
-}
-
-/* Media queries que hacen la magia del responsive */
-@media (min-width: 576px) {
-  .producto {
-    width: 50%;  /* 2 productos por fila en tablets pequeñas */
-  }
-}
-
-@media (min-width: 768px) {
-  .producto {
-    width: 33.333%;  /* 3 productos por fila en tablets */
-  }
-}
-
-@media (min-width: 992px) {
-  .producto {
-    width: 25%;  /* 4 productos por fila en pantallas grandes */
-  }
 }
 
 .producto:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .producto img {
   width: 100%;
-  height: 180px;
+  max-width: 160px;
+  height: auto;
   object-fit: contain;
-  margin-bottom: 10px;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background-color: #f9f9f9;
+  margin-bottom: 0.8rem;
+  border-radius: 10px;
 }
 
-.producto h2 {
+.producto h3 {
   font-size: 1rem;
-  margin: 10px 0;
-  color: var(--color-dark);
-  border: none;
-  padding: 0;
+  color: #15727c;
+  margin-bottom: 0.3rem;
 }
 
 .producto p {
   font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 10px;
-  min-height: 40px;
+  margin-bottom: 0.6rem;
 }
 
 .precio {
-  display: block;
+  font-size: 1rem;
   font-weight: bold;
-  color: var(--color-primary);
-  margin-bottom: 10px;
-  font-size: 1.1rem;
+  color: #f4c542;
+  margin-bottom: 0.6rem;
+  display: block;
 }
 
-.boton-whatsapp {
-  display: block;
+.boton-compra {
   background-color: #25D366;
   color: white;
+  padding: 0.5rem 1rem;
   text-decoration: none;
-  text-align: center;
-  padding: 8px;
-  border-radius: var(--radius);
   font-weight: bold;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  font-size: 0.9rem;
 }
 
-.boton-whatsapp:hover {
-  background-color: #128C7E;
+.boton-compra:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: var(--color-dark);
+/* FOOTER */
+.site-footer {
+  background-color: #15727c;
   color: white;
-  position: relative;
+  padding: 2rem;
   margin-top: 3rem;
 }
 
-/* Estilos especiales para que parezca más una revista */
-#perros {
-  background-color: #f9f9f9;
-  border-top: 3px solid var(--color-primary);
+.footer-cols {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
 }
 
-#gatos {
-  background-color: #f0f8ff;
-  border-top: 3px solid var(--color-secondary);
+.footer-col {
+  flex: 1;
+  min-width: 240px;
 }
 
-/* Limpiar los flotantes al final de cada sección */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid #f4c542;
+  padding-bottom: 0.3rem;
+}
+
+.footer-col p,
+.footer-col ul {
+  font-size: 0.9rem;
+  color: #e0f7f7;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  color: #e0f7f7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffd700;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+  color: #a9d9d9;
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-cols {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    height: 70px;
+  }
 }
