@@ -1,9 +1,9 @@
 body {
-    font-family: 'Open Sans', sans-serif; /* Fuente moderna y legible */
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Fondo muy claro y neutro */
-    color: #282c3f; /* Texto oscuro */
+    background-color: #f0f2f5;
+    color: #282c3f;
     line-height: 1.7;
 }
 
@@ -12,11 +12,11 @@ body {
     position: fixed;
     bottom: 30px;
     left: 30px;
-    background-color: #3366cc; /* Azul moderno y limpio */
+    background-color: #3366cc;
     color: white;
     border: none;
     padding: 14px 20px;
-    border-radius: 50%; /* Botón circular */
+    border-radius: 50%;
     cursor: pointer;
     font-size: 20px;
     z-index: 10;
@@ -36,7 +36,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #fff; /* Fondo blanco */
+    background-color: #fff;
     overflow-x: hidden;
     transition: 0.3s;
     padding-top: 90px;
@@ -47,14 +47,14 @@ body {
     padding: 16px 30px;
     text-decoration: none;
     font-size: 16px;
-    color: #54596f; /* Gris medio */
+    color: #54596f;
     display: block;
     transition: color 0.3s ease;
 }
 
 .sidebar a:hover {
-    color: #3366cc; /* Azul al pasar el ratón */
-    background-color: #f0f0f0; /* Gris muy claro al pasar el ratón */
+    color: #3366cc;
+    background-color: #f0f0f0;
 }
 
 .sidebar.open {
@@ -63,7 +63,7 @@ body {
 
 /* Header */
 header {
-    background-color: #fff; /* Fondo blanco */
+    background-color: #fff;
     padding: 30px;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
@@ -72,7 +72,7 @@ header {
 .logo-container {
     font-size: 2.8em;
     font-weight: bold;
-    color: #3366cc; /* Azul destacado */
+    color: #3366cc;
     letter-spacing: -1px;
 }
 
@@ -85,7 +85,7 @@ header {
     font-size: 2.4em;
     color: #282c3f;
     margin-bottom: 25px;
-    border-bottom: 2px solid #3366cc; /* Línea de énfasis azul */
+    border-bottom: 2px solid #3366cc;
     padding-bottom: 12px;
     margin-top: 40px;
     font-weight: 600;
@@ -93,80 +93,76 @@ header {
 
 .catalogo > section > div {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ancho mínimo para al menos 4 en pantallas amplias */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajustado para al menos 4 */
     gap: 30px;
     margin-top: 25px;
 }
 
-/* Producto Individual */
+/* Producto Individual (El "Cuadrado") */
 .producto {
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Apilar elementos dentro del cuadrado */
     transition: box-shadow 0.3s ease;
+    text-align: center; /* Centrar el contenido dentro del cuadrado */
 }
 
 .producto:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
-.producto a:first-child {
+.producto a:first-child { /* Enlace para la imagen */
     display: block;
     text-decoration: none;
 }
 
 .producto img {
     width: 100%;
-    height: 220px; /* Altura fija */
+    height: auto; /* Ajustar altura automáticamente */
+    max-height: 180px; /* Altura máxima para evitar que los cuadrados sean demasiado altos */
     object-fit: cover;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
 }
 
-.producto-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.producto-info h2 {
-    font-size: 1.2em;
+.producto h2 {
+    font-size: 1.1em;
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     color: #282c3f;
     font-weight: 500;
+    padding: 0 15px; /* Espacio a los lados del título */
 }
 
-.producto-info p {
+.producto p {
     font-size: 0.95em;
     color: #54596f;
-    margin-bottom: 15px;
-    flex-grow: 1;
+    margin-bottom: 12px;
+    padding: 0 15px; /* Espacio a los lados del párrafo */
 }
 
 .precio {
     display: block;
     font-size: 1.2em;
     font-weight: bold;
-    color: #2ecc71; /* Verde moderno */
-    margin-bottom: 20px;
+    color: #2ecc71;
+    margin-bottom: 15px;
 }
 
 .boton-whatsapp {
     display: inline-block;
-    background-color: #2ecc71; /* Verde moderno */
+    background-color: #2ecc71;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 18px;
     text-decoration: none;
     border-radius: 8px;
     font-size: 0.9em;
     transition: background-color 0.3s ease;
-    text-align: center;
+    margin-bottom: 20px; /* Espacio inferior del botón */
 }
 
 .boton-whatsapp:hover {
@@ -186,7 +182,7 @@ footer {
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
     .catalogo > section > div {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajuste para pantallas más pequeñas */
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Ajuste para pantallas más pequeñas */
     }
 }
 
@@ -200,45 +196,10 @@ footer {
     .catalogo > section > div {
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Asegurar al menos 2 */
     }
-
-    header {
-        padding: 25px;
-    }
-
-    .logo-container {
-        font-size: 2.4em;
-    }
 }
 
 @media (max-width: 576px) {
     .catalogo > section > div {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
-    }
-
-    .menu-btn {
-        bottom: 20px;
-        left: 20px;
-        font-size: 18px;
-        padding: 12px 18px;
-    }
-
-    .sidebar.open {
-        width: 220px;
-    }
-
-    .sidebar a {
-        font-size: 15px;
-        padding: 14px 25px;
-    }
-
-    .catalogo {
-        padding: 20px;
-    }
-
-    .catalogo h2 {
-        font-size: 2em;
-        margin-bottom: 20px;
-        padding-bottom: 10px;
-        margin-top: 30px;
     }
 }
