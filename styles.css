@@ -243,6 +243,41 @@ body {
 }
 
 /* RESPONSIVE */
+/* SOLUCIÓN RESPONSIVA DEL HEADER */
+@media (max-width: 768px) {
+  .header-container {
+    grid-template-columns: 1fr; /* Solo una columna */
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .main-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 0.95rem;
+  }
+
+  .header-left, .header-right {
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .header-left h1 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .header-left p {
+    font-size: 0.95rem;
+  }
+
+  .logo {
+    height: 60px;
+    margin-top: 1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .logo-nav {
     flex-direction: column;
