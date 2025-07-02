@@ -7,8 +7,8 @@
 }
 
 :root {
-  --color-primary: #1a9ea4; /* Celeste profundo */
-  --color-secondary: #ffd700; /* Dorado */
+  --color-primary: #1a9ea4; 
+  --color-secondary: #ffd700; 
   --color-accent: #ffe066;
   --color-dark: #292F36;
   --color-light: #F7FFF7;
@@ -37,18 +37,23 @@ body {
 /* Título y subtítulo a la izquierda */
 .header-left {
   flex: 1;
+  text-align: center;
 }
 
 .header-left h1 {
-  font-size: 1.8rem;
-  margin: 0;
+  font-size: clamp(1rem, 2vw + 0.5rem, 2rem); /* Se adapta entre 1rem y 2rem */
+  margin: 0.2rem 0;
+  line-height: 1.2;
+  font-weight: 700;
+  color: white;
 }
 
 .header-left p {
-  font-size: 1rem;
-  margin: 0;
+  font-size: clamp(0.8rem, 1vw + 0.3rem, 1rem); /* También adaptativo */
+  margin: 0.2rem 0;
   color: #e0f7f7;
 }
+
 
 /* Menú centrado */
 .header-container {
